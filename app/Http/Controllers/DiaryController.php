@@ -21,4 +21,11 @@ class DiaryController extends Controller
         // return view('diaries.index');
         return view('diaries.index',['diaries' => $diaries]);
     }
+
+    public function create()
+    {
+        // views/diaries/create.blade.phpを表示する
+        return view('diaries.create');
+    }
+    
 }
