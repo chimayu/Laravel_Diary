@@ -23,6 +23,11 @@ class CreateDiary extends FormRequest
      */
     public function rules()
     {
+        // validationのルール
+        // 連想配列でルールは指定
+        // keyの部分(title, body) == formのname属性
+        // valueの部分 == validationの条件
+        // valueを複数指定する場合は、パイプ(|)で区切るか、配列にする
         return [
             'title' => 'required|max:30', 
             'body' => 'required',
